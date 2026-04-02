@@ -1,0 +1,14 @@
+# Docker Commands - drserapuysal-database
+
+## Build
+docker build -t ozanemrahyakupoglu/drserapuysal-database:latest .
+
+## Push (Docker Hub)
+docker push ozanemrahyakupoglu/drserapuysal-database:latest
+
+## Run (migrate)
+docker run --rm \
+  -e FLYWAY_URL="jdbc:postgresql://46.225.97.71:5432/postgres?currentSchema=drserapuysal" \
+  -e FLYWAY_USER=postgres \
+  -e FLYWAY_PASSWORD=XXX \
+  ozanemrahyakupoglu/drserapuysal-database:latest
